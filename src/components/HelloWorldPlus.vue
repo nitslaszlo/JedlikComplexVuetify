@@ -3,7 +3,7 @@ v<template>
     <v-container>
       <v-row>
         <v-col cols="12" md="6">
-          <v-text-field v-model="nev" :rules="[v => v.length <= 20 || 'Max 20 karakter!']" counter="20" hint="Maximum 20 karakter engedélyezett" label="Kérem a neved!" autofocus></v-text-field>
+          <v-text-field v-model="nev" :rules="[v => v.length <= 20 || 'Max 20 karakter!']" counter="20" hint="Maximum 20 karakter engedélyezett" label="Kérem a neved!"></v-text-field>
           <v-text-field v-model="xek" :rules="[v => v.length <= 10 || 'Irgum-burgum max 10 darab X!']" counter="10" hint="Maximum 10 darab x engedélyezett" label="10 darab x"></v-text-field>
           <h3>Hello {{ nev }} {{ xek }} {{ felkialtojelek }}</h3>
           <p>Felkiáltójelek darabszáma: {{ felkialtojelDarab }}</p>
@@ -21,7 +21,7 @@ v<template>
 
           <v-row justify="center">
             <v-btn class="mx-3" color="primary" :disabled="!joNapHozzadni(iNap)" @click="hozzadNap()" elevation="5">Nap hozzáadása</v-btn>
-            <v-btn class="mx-3" color="primary" :disabled="!joNapTorolni(iNap)" @click="torolNap()" elevation="5">Nap törlése</v-btn>
+            <v-btn class="mx-3 mb-15" color="primary" :disabled="!joNapTorolni(iNap)" @click="torolNap()" elevation="5">Nap törlése</v-btn>
           </v-row>
         </v-col>
       </v-row>

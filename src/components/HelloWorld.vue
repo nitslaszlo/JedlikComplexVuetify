@@ -41,7 +41,7 @@
           Ecosystem
         </h2>
 
-        <v-row justify="center">
+        <v-row justify="center" class="mb-15">
           <a v-for="(eco, i) in ecosystem" :key="i" :href="eco.href" class="subheading mx-3" target="_blank">
             {{ eco.text }}
           </a>
