@@ -3,8 +3,8 @@
     <h1>I'm a customer</h1>
     <p>I see {{ totalTvCount }} TVs!</p>
     <p v-show="!totalTvCount">I can't buy any..</p>
-    <v-btn class="ma-3" color="primary" :disabled="!totalTvCount" @click="buyTv(1)">Buy TV</v-btn>
-    <v-btn class="ma-3" color="primary"  :disabled="totalTvCount < 2" @click="buyTv(2)">Buy Two TVs</v-btn>
+    <v-btn color="primary" elevation="5" :disabled="!totalTvCount" @click="buyTv(1)">Buy one TV</v-btn>
+    <v-btn color="primary" elevation="5" :disabled="totalTvCount < 2" @click="buyTv(2)">Buy two TVs</v-btn>
 
     <h3>Demo Link:</h3>
     <ul>
@@ -32,5 +32,9 @@ export default class VuexDemoComp extends Vue {
 <style scoped>
 ul {
   list-style-type: none;
+}
+.v-btn {
+  text-transform: capitalize !important;
+  margin: 10px;
 }
 </style>
