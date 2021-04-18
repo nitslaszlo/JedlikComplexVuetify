@@ -3,20 +3,10 @@
     <v-app>
       <v-app-bar app color="primary" dark absolute class="hidden-xs-only">
         <div class="d-flex align-center">
-          <v-img src="@/assets/Jedlik.png" transition="scale-transition" width="30" />
+          <v-img src="@/assets/Jedlik.png" transition="scale-transition" width="30" class="mr-4" />
         </div>
 
-        <v-spacer></v-spacer>
-
-        <v-btn color="transparent" elevation="0" to="/">Home</v-btn>
-
-        <v-spacer></v-spacer>
-
-        <v-btn color="transparent" elevation="0" to="/demo">Demo</v-btn>
-
-        <v-spacer></v-spacer>
-
-        <v-btn color="transparent" elevation="0" to="/about">About</v-btn>
+        <v-btn v-for="item in menuItems" :key="item.path" color="transparent" elevation="0" :to="item.path">{{ item.name }}</v-btn>
 
         <v-spacer></v-spacer>
 
@@ -31,22 +21,24 @@
       </v-app-bar>
 
       <v-navigation-drawer v-model="drawer" absolute top temporary>
-        <v-btn color="transparent" elevation="0" to="/">Home</v-btn>
-
-        <v-spacer></v-spacer>
-
-        <v-btn color="transparent" elevation="0" to="/demo">Demo</v-btn>
-
-        <v-spacer></v-spacer>
-
-        <v-btn color="transparent" elevation="0" to="/about">About</v-btn>
-
-        <v-spacer></v-spacer>
-
-        <v-btn href="https://github.com/nitslaszlo/JedlikComplexVuetify" target="_blank" text>
-          <span class="mr-2">GitHub</span>
-          <v-icon>mdi-github</v-icon>
-        </v-btn>
+        <v-list dense nav>
+          <v-list-item v-for="item in menuItems" :key="item.path" link :to="item.path">
+            <v-list-item-content>
+              <v-list-item-title>{{ item.name }}</v-list-item-title>
+            </v-list-item-content>
+            <!-- <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon> -->
+          </v-list-item>
+          <v-list-item href="https://github.com/nitslaszlo/JedlikComplexVuetify" link>
+          <v-list-item-content>
+              <v-list-item-title>GITHUB</v-list-item-title>
+            </v-list-item-content>
+            <v-list-item-icon>
+              <v-icon>mdi-github</v-icon>
+            </v-list-item-icon>
+          </v-list-item>
+        </v-list>
       </v-navigation-drawer>
 
       <v-main>
@@ -68,8 +60,42 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
+type TMenuItems = {
+  name: string;
+  path: string;
+};
+
 @Component
 export default class App extends Vue {
   private drawer = false;
+  private menuItems: TMenuItems[];
+
+  constructor() {
+    super();
+    this.menuItems = [
+      {
+        name: "HOME",
+        path: "/"
+      },
+      {
+        name: "DEMO",
+        path: "/demo"
+      },
+      {
+        name: "VUEX",
+        path: "/vuex"
+      },
+      {
+        name: "ABOUT",
+        path: "/about"
+      }
+    ];
+  }
 }
 </script>
+
+<style>
+.v-navigation-drawer.v-btn {
+  display: block;
+}
+</style>

@@ -1,5 +1,5 @@
 v<template>
-  <v-form>
+  <v-form class="mt-3">
     <v-container>
       <v-row>
         <v-col cols="12" md="6">
@@ -119,10 +119,6 @@ export default class HelloWorldPlus extends Vue {
 </script>
 
 <style scoped>
-.plus {
-  background-color: azure;
-  width: 40vw;
-}
 
 ol {
   list-style-position: inside;
@@ -130,6 +126,10 @@ ol {
 
 h3 {
   color: blue;
+}
+
+.v-form {
+  background-color: lightskyblue;
 }
 
 </style>
