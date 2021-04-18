@@ -6,9 +6,16 @@
 
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
-        <v-img class="shrink mr-2" contain src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition" width="40" />
+        <v-img class="shrink mr-2" contain src="@/assets/Jedlik.png" transition="scale-transition" width="40" />
       </div>
+
+      <v-spacer></v-spacer>
+
       <v-btn color="transparent" elevation="0" to="/">Home</v-btn>
+
+      <v-spacer></v-spacer>
+
+      <v-btn color="transparent" elevation="0" to="/demo">Demo</v-btn>
 
       <v-spacer></v-spacer>
 
@@ -29,9 +36,11 @@
       </v-container>
     </v-main>
 
-    <!-- <v-footer app>
-
-    </v-footer> -->
+    <v-footer absolute fixed padless>
+      <v-card flat tile width="100%" class="primary lighten-1 text-center">
+        <v-card-text class="white--text">© {{ new Date().getFullYear() }} — <strong>Jedlik</strong> </v-card-text>
+      </v-card>
+    </v-footer>
   </v-app>
 </template>
 

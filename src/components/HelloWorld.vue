@@ -120,7 +120,7 @@ export default class App extends Vue {
     this.whatsNext = [
       {
         text: "Explore components",
-        href: "https://vuetifyjs.com/components/api-explorer"
+        href: "https://vuetifyjs.com/en/components/api-explorer/"
       },
       {
         text: "Select a layout",

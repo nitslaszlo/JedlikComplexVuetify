@@ -1,6 +1,7 @@
 <template>
-  <div class="about">
-    <h1 class="text-center">This is an about page</h1>
+  <div class="d-flex flex-column align-center">
+    <h1>This is an about page</h1>
+    <v-img src="@/assets/Jedlik.png" max-width="300"></v-img>
   </div>
 </template>
 
