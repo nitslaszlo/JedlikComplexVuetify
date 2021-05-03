@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app>
-      <v-app-bar app color="primary" dark absolute class="hidden-xs-only">
+      <v-app-bar app color="primary" dark class="hidden-xs-only">
         <div class="d-flex align-center">
           <v-img src="@/assets/Jedlik.png" transition="scale-transition" width="30" class="mr-4" />
         </div>
@@ -48,7 +48,7 @@
         </v-container>
       </v-main>
 
-      <v-footer absolute fixed padless>
+      <v-footer fixed padless>
         <v-card flat tile width="100%" class="primary lighten-1 text-center">
           <v-card-text class="white--text">© {{ new Date().getFullYear() }} — <strong>Jedlik</strong> </v-card-text>
         </v-card>
@@ -69,6 +69,7 @@ type TMenuItems = {
 export default class App extends Vue {
   private drawer = false;
   private menuItems: TMenuItems[];
+  private collapseOnScroll = true;
 
   constructor() {
     super();
