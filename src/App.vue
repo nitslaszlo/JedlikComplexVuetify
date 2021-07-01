@@ -83,12 +83,20 @@ export default class App extends Vue {
         path: "/demo"
       },
       {
+        name: "DEMO2",
+        path: "/demo2"
+      },
+      {
         name: "VUEX",
         path: "/vuex"
       },
       {
         name: "ABOUT",
         path: "/about"
+      },
+      {
+        name: "ABOUT2",
+        path: "/about2"
       }
     ];
   }
