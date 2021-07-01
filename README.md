@@ -1,4 +1,4 @@
-# teszt
+# JedlikComplexVuetify
 
 ## Project setup
 ```
