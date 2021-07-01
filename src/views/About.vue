@@ -12,7 +12,7 @@ import { Component, Vue } from "vue-property-decorator";
 export default class About extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 h1 {
   color: red;
 }

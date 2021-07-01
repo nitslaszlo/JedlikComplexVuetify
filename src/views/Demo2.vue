@@ -143,7 +143,7 @@ interface IHeaders {
 }
 
 @Component
-export default class Demo extends Vue {
+export default class Demo2 extends Vue {
   private checkbox = true;
   private radioGroup = 1;
   private switch1 = true;
@@ -276,4 +276,4 @@ export default class Demo extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>

@@ -19,7 +19,7 @@ import HelloWorldPlus from "@/components/HelloWorldPlus.vue";
 export default class Demo extends Vue {}
 </script>
 
-<style>
+<style scoped lang="scss">
 #demo {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
 }
