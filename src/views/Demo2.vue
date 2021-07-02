@@ -40,10 +40,10 @@
         </v-flex>
 
         <v-flex xs12 sm6 md3 ld3 xl3>
-          <v-btn color="success">Success</v-btn>
-          <v-btn color="error">Error</v-btn>
-          <v-btn color="warning">Warning</v-btn>
-          <v-btn color="info">Info</v-btn>
+          <v-btn color="success" class="vbtn">Success</v-btn>
+          <v-btn color="error"  class="vbtn">Error</v-btn>
+          <v-btn color="warning" class="vbtn">Warning</v-btn>
+          <v-btn color="info" class="vbtn">Info</v-btn>
           <v-checkbox
             v-model="checkbox"
             :label="`Checkbox 1: ${checkbox.toString()}`"
@@ -276,4 +276,8 @@ export default class Demo2 extends Vue {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.vbtn {
+   margin: 5px;
+}
+</style>

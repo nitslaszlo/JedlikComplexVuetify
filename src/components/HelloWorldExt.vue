@@ -1,10 +1,9 @@
-
 <template>
   <div class="d-flex flex-column align-center hello">
     <!-- v-bind:title röviden :title -->
     <!-- v-on:click röviden @click -->
     <h1 :title="message" @click="showHide()">{{ msg }} {{ currentDateTime }} Click me to hide!</h1>
-    <h1 v-once :title="message">{{ msg }} {{ currentDateTime }} (v-once direktíva) </h1>
+    <h1 v-once :title="message">{{ msg }} {{ currentDateTime }} (v-once direktíva)</h1>
     <h2 v-if="show">Elrejtés v-if direktívával</h2>
     <h2 v-show="show">Elrejtés v-show direktívával</h2>
   </div>
